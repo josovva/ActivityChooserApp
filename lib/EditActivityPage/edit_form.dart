@@ -51,11 +51,12 @@ class EditActivityFormState extends State<EditActivityForm> {
               const Text("Name",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16),
+                padding: const EdgeInsets.only(left: 8, right: 8),
                 child: TextFormField(
+                  initialValue: db.activityList[index].name,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter the name of an activity!';
+                      return 'Please enter name of an activity!';
                     } else {
                       _name = value;
                     }

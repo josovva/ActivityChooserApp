@@ -8,7 +8,7 @@ void main() async {
   Hive.registerAdapter(ActivityAdapter());
 
   // ignore: unused_local_variable
-  await Hive.openBox('storageActivities');
+  var box = await Hive.openBox('storageActivities');
 
   runApp(const ActivityChooserApp());
 }

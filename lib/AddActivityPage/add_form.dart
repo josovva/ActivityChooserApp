@@ -44,17 +44,20 @@ class AddActivityFormState extends State<AddActivityForm> {
             children: [
               const Text("Name",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              TextFormField(
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter the name of an activity!';
-                  } else {
-                    _name = value;
-                  }
-                  return null;
-                },
-                maxLength: 50,
-                textAlign: TextAlign.center,
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter the name of an activity!';
+                    } else {
+                      _name = value;
+                    }
+                    return null;
+                  },
+                  maxLength: 50,
+                  textAlign: TextAlign.center,
+                ),
               ),
             ],
           ),

@@ -10,6 +10,7 @@ class ActivityDataBase {
     'fun',
     'movie',
     'sport',
+    'travel',
     'work',
     'other'
   ];
